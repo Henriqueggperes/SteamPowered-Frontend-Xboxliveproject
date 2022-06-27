@@ -10,7 +10,8 @@ export const colors = {
     
     primaryFontColor: 'CECECE',
 
-    headerTextColor: '398CC8'
+    headerTextColor: '398CC8',
+    headerTextColor2:'C5C3C0'
     
-
+    
 }
