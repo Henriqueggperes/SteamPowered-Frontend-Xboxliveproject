@@ -5,9 +5,9 @@ export const constants = {
     headingFontSize: '64px',
     currencyFontSize:'20px',
     
-    adminSettingsFontSize:'16px',
+    adminSettingsFontSize:'11px',
    
-    profileNameFontSize:'32px',
+    profileNameFontSize:'20px',
     profileImgHeight: '90%',
     profileImgWidth: '10%',
 
