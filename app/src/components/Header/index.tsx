@@ -1,5 +1,5 @@
 import { ReactComponent as Logo } from "./../../assets/img/logo_steam.svg";
-import {ReactComponent as crown} from "./../../assets/icons/crown.svg"
+import Crown from "./../../assets/icons/crown.svg"
 import Frenchie from "./../../assets/img/Frenchie.png"
 import * as S from "./style";
 
@@ -17,6 +17,7 @@ const Header = () => {
             {" "}
             {/* Container que contém o mini card do perfil*/}
             <S.CardProfileImage src={Frenchie}/>
+            <S.CrownImg src={Crown}/>
             <S.CardProfileContainer>
               {" "}
               {/*Mini card do perfil*/}

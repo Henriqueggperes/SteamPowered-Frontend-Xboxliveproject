@@ -79,7 +79,7 @@ ${({theme})=>css`
 export const CardProfileCurrencyContainer = styled.div`
 ${({theme})=>css`
  height: 100%;
- width: 40%;
+ width: 30%;
  display: flex;
  justify-content: center;
  align-items: center;
@@ -90,5 +90,10 @@ ${({theme})=>css`
   color: ${theme.colors.btnTextColor2};
   font-weight: ${theme.constants.fontWheight};
   font-size: ${theme.constants.currencyFontSize};
+`}
+`
+export const CrownImg = styled.img`
+${({theme})=>css`
+  margin-bottom: 50px;
 `}
 `
