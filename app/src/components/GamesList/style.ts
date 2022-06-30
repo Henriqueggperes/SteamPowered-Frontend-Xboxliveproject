@@ -18,7 +18,7 @@ export const FavoritesGenresTitle = styled.span`
 ${({theme})=>css`
  color: ${theme.colors.headerTextColor};
  font-size: ${theme.constants.headingFontSize};
- margin: 70px 0 0 40px;
+ margin: 50px 0 0 40px;
 `}
 `
 
