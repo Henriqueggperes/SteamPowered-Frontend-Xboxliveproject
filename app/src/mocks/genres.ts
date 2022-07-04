@@ -1,4 +1,5 @@
-export const games = [
+import { Genre } from "utils/types/genres.type"
+export const genres: Genre[] = [
     {
         id:'Tudks35scdsaA39',
         genreName:'FPS'
