@@ -1,0 +1,110 @@
+.content-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #25282b;
+    height: 90vh;
+    width: 100%;
+}
+.section_header-container{
+    display: flex;
+    height: 10%;
+    width: 100%;
+}
+
+.edit_profile_form-container{
+    display: flex;
+    justify-content: center;
+    height: 90%;
+    width: 100%;
+}
+
+.profiles-link{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 10%;
+}
+.back_arrow-icon{
+    position: relative;
+    top: 40px;
+    margin: 0;
+    padding: 0;
+    height: 70%;
+    width: 100%;
+}
+
+.section_header-title{
+    position: relative;
+    top: 90px;
+    font-size: 3.5rem;
+    color: #398CC8;
+}
+
+.edit_profile-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    border-radius: .3rem;
+    top: 100px;
+    right: 100px;
+    height: 400px;
+    width: 400px;
+    background-color: #171A21;
+}
+.edit_profile_img-container{
+    position: relative;
+    top: 30px;
+    left: 30px;
+}
+
+.edit_profile-image{
+    position: relative;
+    height: 150px;
+    width: 200px;
+}
+
+
+
+.name_input-container{
+    position: relative;
+    top: 60px;
+    left: 10px;
+}
+
+.input{
+    background-color: #32353C;
+    outline: none;
+    border-style: none;
+    border-radius: .2rem;
+    color: #818181;
+    font-size: 1.2rem;
+    height: 30px;
+    width: 430px ;
+}
+
+
+.buttons-container{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 50px;
+}
+
+.button{
+    font-size: 1rem;
+    color: #FFFF;
+    height: 30px;
+    width: 150px;
+    cursor:pointer;
+}
+
+.delete-button{
+    background: none;
+    border: solid 1px 
+}
+
+.update-button{
+    background-color: #016918;
+    border: none;
+}
