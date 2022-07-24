@@ -1,4 +1,4 @@
-import { ReactComponent as Logo } from "./../../assets/img/logo_steam.svg";
+import logo from "./../../assets/img/logo_steam.svg";
 import Crown from "./../../assets/icons/crown.svg"
 import Frenchie from "./../../assets/img/Frenchie.png"
 import * as S from "./style";
@@ -10,7 +10,7 @@ const Header = () => {
         {" "}
         {/*HEADER*/}
         <S.HeaderImgContainer>
-          <Logo />
+          <S.HeaderImgLogo src={logo}/>
         </S.HeaderImgContainer>
       </S.HeaderContainer>
       {/*HEADER*/}

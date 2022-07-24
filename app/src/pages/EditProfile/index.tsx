@@ -3,7 +3,7 @@ import "./style.css";
 import backArrow from "./../../assets/icons/arrow.svg";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import cam from "./../../assets/img/camera.png";
-import { ChangeEvent, SyntheticEvent, useState } from "react";
+import React, { ChangeEvent, SyntheticEvent, useState } from "react";
 import { profilesService } from "services/profilesService";
 import { useEffect } from "react";
 
@@ -40,6 +40,14 @@ const EditProfile = () => {
       navigate('/profiles')
     }
   };
+
+  const deletProfile = async ()=>{
+     const id = profile.id;
+       const response = await profilesService.deleteProfileById(id);
+       if(response){
+         alert('Perfil deletado com sucesso');
+         navigate('/profiles');
+  }}
 
   return (
     <>
@@ -86,9 +94,9 @@ const EditProfile = () => {
             </div>
             <div className="buttons-container">
               <button type="submit" className="update-button button">ATUALIZAR</button>
-              <button className="delete-button button">DELETAR</button>
             </div>
           </form>
+              <button onClick={deletProfile} className="delete-button button">DELETAR</button>
         </div>
       </section>
     </>

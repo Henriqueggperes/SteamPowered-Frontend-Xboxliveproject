@@ -18,4 +18,13 @@ export const HeaderImgContainer = styled.div`
     align-items: center;
   `}
 `;
+export const HeaderImgLogo = styled.img`
+  ${({ theme }) => css`
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  `}
+`;
 

@@ -23,6 +23,13 @@ const profilesService = {
     })
     .catch((error)=>{
         alert(error.response.data.message)
+    }),
+    deleteProfileById: (id:any)=>api.delete(`profile/${id}`)
+    .then((response)=>{
+        return response 
+    })
+    .catch((error)=>{
+        alert(error.response.data.message)
     })
 }
 

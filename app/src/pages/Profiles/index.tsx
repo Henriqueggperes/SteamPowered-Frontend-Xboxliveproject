@@ -3,6 +3,7 @@ import "./style.css";
 
 import { useState, useEffect } from "react";
 import edit from "./../../assets/icons/edit.icon.svg"
+import add from "./../../assets/icons/add-profile.svg"
 import EditProfile from "pages/EditProfile";
 
 import { profilesService } from "./../../services/profilesService";
@@ -54,6 +55,11 @@ const Profiles = () => {
             </div>
           </div>
         ))}
+        <div className="add_profile_icon-container">
+          <Link to="/create/profile">
+            <img className="add_profile-icon" src={add} alt="Icone para adicionar um novo perfil" />
+          </Link>
+        </div>
       </section>
     </>
   );

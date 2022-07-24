@@ -12,7 +12,7 @@
   flex-direction: column;
   height: 300px;
   width: 200px;
-  margin-right:20px;
+  margin-right:3rem;
 }
 
 .profile_image-container{
@@ -40,14 +40,25 @@
 .profile_title-container{
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top:1rem;
   width: 100%;
 }
 
 .profile-title{
- font-size: 2rem;
+ font-size: 100%;
  color: #ffff;
  font-weight: bold;
  background-color: #171A21;
  border-radius: .2rem;
+}
+
+.add_profile_icon-container{
+  height: 100px;
+  width: 100px;
+}
+
+.add_profile-icon{
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
 }
