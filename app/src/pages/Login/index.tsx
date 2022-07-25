@@ -31,10 +31,12 @@ const Login = () => {
 
     const response = await loginRegisterService.login(values);
     const jwt = response.data.token;
+    const isAdmin = response.data.user.isAdmin;
     const userId = response.data.user.id;
      if (jwt) {
       localStorage.setItem("jwt", jwt);
-      localStorage.setItem("userId", userId)
+      localStorage.setItem("userId", userId);
+      localStorage.setItem("isAdmin", isAdmin );
       navigate("/profiles");
     }
   };

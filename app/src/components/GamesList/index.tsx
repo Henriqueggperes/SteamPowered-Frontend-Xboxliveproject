@@ -1,10 +1,9 @@
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { profilesService } from "services/profilesService";
 import * as S from "./style";
 
 const GamesList = () => {
-  const params = useParams();
-  
-
   return (
     <>
       <S.FavoritesGenresListContainer>
@@ -28,7 +27,7 @@ const GamesList = () => {
           <S.FavoritesGenresTitle>GÊNEROS</S.FavoritesGenresTitle>
         </S.FavoritesGenresTitle>
         <S.GamesGenresContainer>
-            {/* {genres.map((genre) => (
+          {/* {genres.map((genre) => (
               <S.GameGenreCard>
                 
                 <span>{genre.genreName}</span>
@@ -40,4 +39,4 @@ const GamesList = () => {
   );
 };
 
-export default GamesList 
+export default GamesList;
