@@ -30,7 +30,15 @@ const profilesService = {
     })
     .catch((error)=>{
         alert(error.response.data.message)
+    }),
+    postProfile: (profile:{})=>api.post(`profile`,profile)
+    .then((response)=>{
+        return response
     })
+    .catch((error)=>{
+        alert(error.response.data.message)
+    })
+    
 }
 
 export {

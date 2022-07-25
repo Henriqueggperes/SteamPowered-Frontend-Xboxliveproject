@@ -4,7 +4,7 @@ import "./style.css";
 import { useState, useEffect } from "react";
 import edit from "./../../assets/icons/edit.icon.svg"
 import add from "./../../assets/icons/add-profile.svg"
-import EditProfile from "pages/EditProfile";
+import EditProfile from "pages/CreateEditProfile";
 
 import { profilesService } from "./../../services/profilesService";
 import { Link, useNavigate } from "react-router-dom";
@@ -34,9 +34,7 @@ const Profiles = () => {
     userProfiles();
   },[]);
   
-  const selectProfile = ()=>{
-    
-  }
+  
 
   return (
     <>
@@ -45,7 +43,9 @@ const Profiles = () => {
         {profiles.map((element: any) => (
           <div className="profile-card" key={element.id}>
             <div className="profile_image-container">
-              <img onClick={selectProfile} className="profile-image" src={element.imageUrl} />
+              <Link to={`/homepage/profile/${element.id}`} className="homepage-link">
+                <img className="profile-image" src={element.imageUrl} />
+              </Link>
               <Link  to={`/edit/profile/${element.id}`} >
               <img src={edit} className="edit_profile-icon"/>
               </Link>

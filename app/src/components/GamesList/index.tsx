@@ -1,7 +1,10 @@
+import { useParams } from "react-router-dom";
 import * as S from "./style";
-import { games } from "mocks/games";
-import { genres } from "mocks/genres";
+
 const GamesList = () => {
+  const params = useParams();
+  
+
   return (
     <>
       <S.FavoritesGenresListContainer>
@@ -10,12 +13,12 @@ const GamesList = () => {
           <S.FavoritesGenresTitle>FAVORITOS</S.FavoritesGenresTitle>
         </S.FavoritesGenresTitle>
         <S.GamesGenresContainer>
-          {games.map((game) => (
+          {/* {games.map((game) => (
             <S.GameGenreCard>
               
               <span>{game.gameName}</span>
             </S.GameGenreCard>
-          ))}
+          ))} */}
         </S.GamesGenresContainer>
       </S.FavoritesGenresListContainer>
 
@@ -25,16 +28,16 @@ const GamesList = () => {
           <S.FavoritesGenresTitle>GÊNEROS</S.FavoritesGenresTitle>
         </S.FavoritesGenresTitle>
         <S.GamesGenresContainer>
-            {genres.map((genre) => (
+            {/* {genres.map((genre) => (
               <S.GameGenreCard>
                 
                 <span>{genre.genreName}</span>
               </S.GameGenreCard>
-            ))}
+            ))} */}
         </S.GamesGenresContainer>
       </S.FavoritesGenresListContainer>
     </>
   );
 };
 
-export default GamesList;
+export default GamesList 

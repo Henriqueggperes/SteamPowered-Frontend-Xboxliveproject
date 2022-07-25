@@ -31,8 +31,10 @@ const Login = () => {
 
     const response = await loginRegisterService.login(values);
     const jwt = response.data.token;
+    const userId = response.data.user.id;
      if (jwt) {
       localStorage.setItem("jwt", jwt);
+      localStorage.setItem("userId", userId)
       navigate("/profiles");
     }
   };
