@@ -92,3 +92,15 @@
     color: rgba(185, 11, 11, 0.797);
     font-weight: bold;
   }
+  .regex-specify-span{
+    width: 40%;
+    font-size: .8rem;
+  }
+
+  .regex-password-container{
+    display: flex;
+  }
+
+  .password{
+    height: 100%;
+  }

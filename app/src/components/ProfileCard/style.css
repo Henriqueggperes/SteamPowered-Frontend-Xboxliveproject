@@ -1,0 +1,14 @@
+.gamemenage-link{
+   text-decoration: none;
+   width: 100%;
+   height: 20%;
+}
+
+.profiles-link{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-decoration: none;
+   height: 100%;
+   width: 100%;
+}

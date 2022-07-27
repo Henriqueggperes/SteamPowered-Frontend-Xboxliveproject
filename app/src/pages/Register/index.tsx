@@ -74,17 +74,20 @@ const Register = () => {
               <label htmlFor="cpf">CPF</label>
               <input type="text" name="cpf" onChange={handleChange} required className="register-input"/>
             </div>
-              <label htmlFor="password">Senha</label>
             <div className="register_input-container">
-              <input type="password" name="password" onChange={handleChange} required className="register-input"/>
+              <label htmlFor="password">Senha</label>
+              <div className="regex-password-container">
+              <input type="password" name="password" onChange={handleChange} required className="register-input password"/>
+              <span className="regex-specify-span"> A senha deve conter ao menos 6 caracteres, um caracter especial e uma letra maiúscula. Ex: Y7@kkmv</span>
+              </div>
             </div>
             <div className="register_input-container">
               <label htmlFor="confirmPassword">Confirme sua senha</label>
-              <input type="password" name="confirmPassword" onChange={handleChange} required className="register-input" />
+              <input type="password" name="confirmPassword" onChange={handleChange} required className="register-input " />
             </div>
               {notMatch? <span className="not_match-span">*As senhas informadas não conferem*</span>:""}
             <div className="register_form_button-container">
-              <button>Iniciar sessão</button>
+              <button>Cadastrar</button>
             </div>
           </form>
         </section>

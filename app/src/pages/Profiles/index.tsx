@@ -1,10 +1,11 @@
 import Header from "components/Header";
 import "./style.css";
 
+
 import { useState, useEffect } from "react";
 import edit from "./../../assets/icons/edit.icon.svg"
 import add from "./../../assets/icons/add-profile.svg"
-import EditProfile from "pages/CreateEditProfile";
+import backArrow from "./../../assets/icons/arrow.svg"
 
 import { profilesService } from "./../../services/profilesService";
 import { Link, useNavigate } from "react-router-dom";
@@ -18,16 +19,17 @@ const Profiles = () => {
   const jwt = localStorage.getItem("jwt");
   
   const userProfiles = async () => {
-    try {
+    
       const response: any = await profilesService.getAllProfiles();
-      setProfiles(response.data);
-      console.log(profiles)
-    } catch {
-      if (!jwt) {
+      if(response.data){
+        setProfiles(response.data);
+        console.log(profiles)
+      }
+    
+      else if (response == 401) {
         alert("Acesso não autorizado, por favor, efetue o login");
         navigate("/");
       }
-    }
   };
   
   useEffect(()=>{
@@ -40,6 +42,9 @@ const Profiles = () => {
     <>
       <Header></Header>
       <section className="profiles_card-container">
+        <Link to="/" className="link-to-login">
+        <img src={backArrow}  className='back-arrow-image' alt="Icone de uma flecha para voltar de página"/>
+        </Link>
         {profiles.map((element: any) => (
           <div className="profile-card" key={element.id}>
             <div className="profile_image-container">

@@ -6,7 +6,7 @@ const profilesService = {
         return response;
     })
     .catch((error)=>{
-        console.log("Erro em buscar os perfis",error)
+        return error.response.data.statusCode
     }),
 
     getProfileById: (id:any)=> api.get(`profile/${id}`)
@@ -15,6 +15,7 @@ const profilesService = {
     })    
     .catch((error)=>{
         alert(error.response.data.message);
+        return error.response.data.statusCode;
     }),
 
     patchProfileById: (id:any, values:any)=> api.patch(`profile/${id}`, values)

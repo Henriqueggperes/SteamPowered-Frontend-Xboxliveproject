@@ -1,0 +1,130 @@
+.modal-forms-container{
+    height: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.modal-add-game-form{
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    width: 400px;
+    background-color: #171A21;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.modal-add-genre-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 70px;
+    width: 200px;
+    background-color: #171A21;
+}
+.modal-add-genre-title{
+    color:#FFff;
+    font-size: 1rem;
+}
+.modal-genre-name-input{
+    position: relative;
+    left: 5px;
+}
+
+.modal-add-game-title{
+    position: relative;
+    font-size: 1rem;
+    color: #ffff;
+    bottom: 20px;
+    left: 10px;
+    margin: 0;
+    padding: 0;
+}
+.modal-game-image-thumbnail-container{
+    display: flex;
+    position: relative;
+    bottom: 20px;
+    margin-left: 30px;
+    justify-content: center;
+    border: dashed 1px;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+}
+
+.modal-cam-image-thumbnail{
+    height: 25px;
+    width: 25px;
+}
+
+.modal-game-image-thumbnail {
+    height: 100%;
+    width: 100%;
+}
+
+.modal-input{
+    margin-left: 10px;
+    height: 20px;
+    width: 105%;
+    background-color: #32353c;
+    color: #a1a0a0;
+    border: none;
+    border-radius: .2rem;
+    outline: none;
+    box-shadow: 5px 5px 15px 5px #0000004a
+}
+
+.modal-game-description-input{
+    height: 40px;
+}
+
+.add-game-button{
+    position: relative;
+    top:10px;
+    left: 10px;
+}
+
+.add-genre-button{
+    position: relative;
+    top:10px;
+    left: 10px;
+}
+
+.button {
+    border: none;
+    outline: none;
+    background-color: #296CD6;
+}
+
+.drop-down-input-container{
+    height: fit-content;
+    display: flex;
+    width: 112%;
+}
+
+.drop-down-icon{
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+}
+
+.drop-down-content{
+   position: absolute;
+   background-color: #171A21;
+   height: 0;
+   width: 0; 
+   overflow: scroll;
+   z-index: 2;
+   height: fit-content;
+   width: fit-content;
+}
+
+.drop-down-genre{
+    font-size: .8rem;
+
+    width: 100%;
+}
+
+.drop-down-content-closed{
+    display: none;
+}

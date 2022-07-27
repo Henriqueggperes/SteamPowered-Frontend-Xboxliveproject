@@ -67,3 +67,17 @@
   height: 100%;
   width: 100%;
 }
+
+.link-to-login{
+  position: absolute;
+  left: 0;
+  top:10rem;
+  height: 10%;
+  width: 10%;
+}
+
+.back-arrow-image{
+
+  height: 50%;
+  width: 50%;
+}

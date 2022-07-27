@@ -1,32 +1,53 @@
 import * as S from "./style";
-import GamesList from "components/GamesList";
+import "./style.css"
 import Header from "components/Header";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { profilesService } from "services/profilesService";
-import { useEffect, useState } from "react";
-const HomePage = () => { 
+import React, { useEffect, useState } from "react";
+import { AiOutlineStar } from "react-icons/ai"
+import { BsController } from "react-icons/bs"
+import  { AiOutlineSearch } from "react-icons/ai"
+import Games from "components/Games";
+
+const HomePage = () => {
   const params = useParams();
   const [profile, setProfile] = useState([]);
-  const isAdmin = localStorage.getItem("isAdmin")
+  const navigate = useNavigate();
+  const [currentHomeState, setHomeCurrentState] = useState('Games')
   
-  useEffect(()=>{
-    getProfileById(params.id)
-  },[])
+  
+  const handleCurrentHomeState = (event: any)=>{
+    setHomeCurrentState(event.target.id)
+  }
+  
+
+  const jwt = localStorage.getItem("jwt");
+  
+  useEffect(() => {
+    getProfileById(params.id);
+  }, []);
 
   const getProfileById = async (id: any) => {
     const response = await profilesService.getProfileById(id);
-    if (response) {
+    if (response.data) {
       setProfile(response.data);
+    } else if (response == 401) {
+        navigate('/')
     }
-
   };
+
 
 
   return (
     <S.Home>
-      <Header profile={profile} ></Header>
+      <Header profile={profile}></Header>
       <S.HomeContentContainer>
-        <GamesList></GamesList>
+      <header className="home-header">
+          <span id="Games" className={`header-games-span-${currentHomeState} home-header-span `} onClick={handleCurrentHomeState}> Jogos <BsController className="header-game-controller"/></span>          
+          <span id="Genres" className={`header-genres-span-${currentHomeState} home-header-span `} onClick={handleCurrentHomeState} > Gêneros <AiOutlineSearch className="header-genre-magnifier"/></span>
+          <span id="Favorites" className={`header-favorites-span-${currentHomeState} home-header-span `} onClick={handleCurrentHomeState}>Favoritos <AiOutlineStar className="header-favorite-star"/></span>  
+        </header>
+        {currentHomeState=="Games"?<Games/>:currentHomeState=="Genres"? "": ""}
       </S.HomeContentContainer>
     </S.Home>
   );

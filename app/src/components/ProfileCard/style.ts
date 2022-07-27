@@ -13,7 +13,7 @@ export const HeaderProfileCardContainer = styled.div`
 export const HeaderProfileCard = styled.div`
   ${({ theme }) => css`
     background-color: ${theme.colors.bgColor1};
-    height: 60%;
+    height: 65%;
     width: 30%;
     display: flex;
     margin: 30px 80px 10px;
@@ -24,9 +24,8 @@ export const HeaderProfileCard = styled.div`
 
 export const CardProfileImage = styled.img`
   ${({ theme }) => css`
-    //MUDAR CONSTANTS DEPOIS
-    height: 80%;
-    width: 20%;
+    height: 90%;
+    width: 180%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,14 +46,26 @@ export const CardProfileContainer = styled.div`
 `;
 export const CardProfileName = styled.span`
   ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 80%;
+    width: 100%;
     color: ${theme.colors.cardProfileNameColor};
-    font-size: ${theme.constants.profileNameFontSize};
+    font-size: 1rem;
   `}
 `;
 export const CardProfileAdminSettings = styled.span`
 ${({theme})=>css`
+ cursor: pointer;
+ position: relative;
+ top: 5px;
+ height: 20%;
+ width: 110%;
  color: ${theme.colors.headerTextColor};
- font-size:${theme.constants.adminSettingsFontSize} ;
+ font-weight: bold;
+ font-size:.7rem ;
 `}
 `
 export const CardProfileCurrencyContainer = styled.div`
@@ -70,11 +81,13 @@ export const CardProfileCurrency = styled.span`
 ${({theme})=>css`
   color: ${theme.colors.btnTextColor2};
   font-weight: ${theme.constants.fontWheight};
-  font-size: ${theme.constants.currencyFontSize};
+  font-size: 1.3rem;
 `}
 `
 export const CrownImg = styled.img`
 ${({theme})=>css`
-  margin-bottom: 50px;
+position: relative;
+top: 25px;
+right: 10px;
 `}
 `

@@ -18,7 +18,7 @@ ${({theme})=>css`
   height: 90vh;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
 `}
 `
