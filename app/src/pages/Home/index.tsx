@@ -8,6 +8,7 @@ import { AiOutlineStar } from "react-icons/ai"
 import { BsController } from "react-icons/bs"
 import  { AiOutlineSearch } from "react-icons/ai"
 import Games from "components/Games";
+import Genres from "components/Genres";
 
 const HomePage = () => {
   const params = useParams();
@@ -47,7 +48,7 @@ const HomePage = () => {
           <span id="Genres" className={`header-genres-span-${currentHomeState} home-header-span `} onClick={handleCurrentHomeState} > Gêneros <AiOutlineSearch className="header-genre-magnifier"/></span>
           <span id="Favorites" className={`header-favorites-span-${currentHomeState} home-header-span `} onClick={handleCurrentHomeState}>Favoritos <AiOutlineStar className="header-favorite-star"/></span>  
         </header>
-        {currentHomeState=="Games"?<Games/>:currentHomeState=="Genres"? "": ""}
+        {currentHomeState=="Games"?<Games/>:currentHomeState=="Genres"? <Genres/>: ""}
       </S.HomeContentContainer>
     </S.Home>
   );
