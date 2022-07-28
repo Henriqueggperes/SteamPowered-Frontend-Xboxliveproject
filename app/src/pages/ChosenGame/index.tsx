@@ -22,12 +22,18 @@ const ChosenGame = () => {
     gameplayYouTubeUrl:"",
     createdAt:"",
     updatedAt:"",
-    genre: []
+    genre: [{
+        createdAt: "",
+        id: "",
+        name: "",
+        updatedAt: "",
+    }]
   })
 
   const getGameById = async () => {
     const response: any = await gameService.getGameById(params.id);
     setGame(response.data);
+    console.log(response.data)
   };
 
   return (
@@ -52,6 +58,7 @@ const ChosenGame = () => {
           </div>
           <div className="game-name-videos-container">
             <h2>{game.gameName}</h2>
+            {/* <span>{game.genre[0].name}</span> */}
             <div className="videos-container">
             <iframe src={game.trailerYouTubeUrl} className="game-trailer" />
             <iframe src={game.gameplayYouTubeUrl} className="game-trailer" />
