@@ -4,6 +4,7 @@ import HomePage from "pages/Home";
 import Register from "pages/Register";
 import Profiles from "pages/Profiles";
 import CreateEditProfile from "pages/CreateEditProfile";
+import ChosenGame from "pages/ChosenGame";
 
 const Router = () => {
   return (
@@ -14,6 +15,7 @@ const Router = () => {
       <Route path="/create/profile" element={<CreateEditProfile/>}/>
       <Route path="/edit/profile/:id" element={<CreateEditProfile/>}/>
       <Route path="/homepage/profile/:id" element={<HomePage />} />
+      <Route path="/chosen-game/:id/profile/:pr" element={<ChosenGame/>}/>
     </Routes>
   );
 };

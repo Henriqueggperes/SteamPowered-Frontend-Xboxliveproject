@@ -30,7 +30,16 @@ const gameService = {
     })
     .catch((error)=>{
         alert(error.response.data.message)
+    }),
+    
+    getGameById: (id:any)=> api.get(`games/${id}`)
+    .then((response)=>{
+        return response
     })
+    .catch((error)=>{
+        alert(error.response.data.message)
+    })
+
 
 }
 

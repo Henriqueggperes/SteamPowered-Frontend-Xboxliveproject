@@ -1,25 +1,14 @@
 import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import { gameService } from "services/gameGenreService";
-import { HiOutlineThumbUp } from "react-icons/hi";
 import favorite from "./../../assets/icons/favorite.svg"
 import "./style.css";
 
-interface gamesObj {
-  id: string;
-  gameName: string;
-  imdbScore: string;
-  imageUrl: string;
-  description: string;
-  year: string;
-  trailerYouTubeUrl: string;
-  gameplayYouTubeUrl: string;
-  createdAt: string;
-  updatedAt: string;
-  genre: [];
-}
-
 const Games = () => {
   const [games, setGames] = useState<any>([]);
+
+  const params = useParams()
+
 
   const allGames = async () => {
     const response: any = await gameService.getAllGames();
@@ -36,7 +25,9 @@ const Games = () => {
       <section className="games-container">
         {games.map((element: any) => (
           <div className="game-card">
+           <Link to={`/chosen-game/${element.id}/profile/${params.id}`} className="chosen-game-link">
             <img src={element.imageUrl} className="game-card-image" />
+           </Link>
             <div className="game-card-info-container">
               <span className="game-card-name">{element.gameName}</span>
               <div className="card-footer">

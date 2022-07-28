@@ -20,10 +20,14 @@
 
 }
 
-
-.game-card-image{
+.chosen-game-link{
     height: 60%;
     width: 90%;
+}
+
+.game-card-image{
+    height: 100%;
+    width: 100%;
     cursor: pointer;
 }
 
