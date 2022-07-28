@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { gameService } from "services/gameGenreService";
 import backArrow from "./../../assets/icons/arrow.svg";
+import { BsWrench } from "react-icons/bs";
 import "./style.css";
 
 const ChosenGame = () => {
@@ -63,6 +64,7 @@ const ChosenGame = () => {
             <iframe src={game.trailerYouTubeUrl} className="game-trailer" />
             <iframe src={game.gameplayYouTubeUrl} className="game-trailer" />
             </div>
+            <BsWrench className="manage-wrench"></BsWrench>
           </div>
         </div>
       </section>
