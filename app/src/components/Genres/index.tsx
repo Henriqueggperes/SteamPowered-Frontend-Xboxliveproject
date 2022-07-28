@@ -1,9 +1,10 @@
+import { games } from "mocks/games";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { genreService } from "services/gameGenreService";
+import "./style.css"
 
 const Genres = () => {
-  
 
 
     const [genres,setGenres] = useState([{
@@ -20,6 +21,7 @@ const Genres = () => {
 
     const allGenres = async ()=>{
        const response:any = await genreService.getAllGenres();
+       setGenres(response.data)
        console.log(response.data)
     }
 
@@ -31,10 +33,10 @@ const Genres = () => {
     <>
       <section className="genres-container">
         {genres.map((element: any) => (
-          <div className="game-card">
+          <div className="genre-card">
             <Link
               to={`/chosen-genre/${element.id}/profile/`}
-              className="chosen-game-link"
+              className="chosen-genre-link"
             >
               <img src={element.game[0].imageUrl? element.game[0].imageUrl : "" } className="genre-card-image" />
             </Link>
@@ -42,7 +44,7 @@ const Genres = () => {
               <span className="game-card-name">{element.name}</span>
             </div>
           </div>
-        ))}
+        ))} 
       </section>
     </>
   );
